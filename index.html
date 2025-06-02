@@ -1,12 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Charity Water Landing Page</title>
+  <!-- Link to the CSS file -->
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Quicksand&display=swap" rel="stylesheet"/>
 </head>
 <body>
-    <!-- Add your HTML here -->
+
+  <!-- Header with logo and title -->
+  <header class="header">
+    <!-- Logo image (replace 'logo.png' with your actual logo file) -->
+    <img src="img/water-can-transparent.png" alt="Charity: Water Logo" class="header-logo"/>
+    <!-- Website title -->
+    <div class="header-title">Charity: Water</div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="img/Ethiopian girl holding books.jpg" alt="Ethiopian Girl Holding Books" style="width:200px; border-radius:10px; margin-bottom:20px;">
+    <div class="hero-content">
+      <!-- Added image to the hero section -->
+      <h1>Join the Clean Water Movement</h1>
+      <p>Your support brings health, education, and opportunity worldwide.</p>
+    </div>
+  </section>
+
+  <!-- Impact Story Section -->
+  <section class="impact">
+    <div class="impact-container">
+      <!-- Image comes first so it appears on the left in flex layout -->
+      <img src="img/Ethiopian women.jpg" alt="Impact Story Image"/>
+      <div class="impact-text">
+        <h2>Real Lives Changed</h2>
+        <p>Meet Amina, a young girl in Ethiopia whose life transformed when clean water arrived in her village. She now spends her days in school instead of walking miles to fetch water. Your support makes stories like hers possible.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Donation Section -->
+  <section class="donate">
+    <h2>Make an Impact Today</h2>
+    <p>Help us reach more communities with clean, safe water.</p>
+    <a href="#" class="btn">Donate Now</a>
+  </section>
+
 </body>
 </html>
+

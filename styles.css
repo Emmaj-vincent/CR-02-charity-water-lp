@@ -17,3 +17,182 @@ Fonts:
 - Avenir
 
 */
+/* General Reset */
+*/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  background-color: #fff;
+  color: #1A1A1A; /* Changed to a darker color for better readability */
+  line-height: 1.6;
+}
+
+/* HEADER SECTION */
+/* Styles for the header with logo and title */
+.header {
+  display: flex;                /* Use flexbox to arrange items */
+  flex-direction: column;       /* Stack logo and title vertically */
+  align-items: center;          /* Center items horizontally */
+  justify-content: center;      /* Center items vertically */
+  padding: 40px 0 20px 0;       /* Space above and below header */
+  background-color: #fff;       /* White background for header */
+}
+
+.header-logo {
+  width: 50px;                  /* Set logo size */
+  height: 50px;
+  object-fit: contain;          /* Make sure image fits nicely */
+  margin-bottom: 2px;          /* Space between logo and title */
+}
+
+.header-title {
+  font-family: 'Avenir';
+  font-size: 1rem;
+  color: #1A1A1A; /* Changed to a darker color for better readability */
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+/* HERO SECTION */
+.hero {
+  background: url() center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  max-height: 600px;
+  max: width 100%;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* Dark overlay for contrast */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #f1f1f1;
+}
+
+/* IMPACT SECTION */
+.impact {
+  background-color: #BF6C46; /* Changed to new color */
+  padding: 100px 20px;
+}
+
+.impact-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.impact img {
+  width: 300px;
+  max-width: 100%;
+  margin-right: 20px
+  height: auto;
+  border-radius: 12px;
+  flex: 1 1 45%;
+}
+
+.impact-text {
+  flex: 1 1 45%;
+}
+
+.impact h2 {
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+/* DONATION SECTION */
+.donate {
+  text-align: center;
+  background-color: #BF6C46; /* Changed to new color */
+  color: white;
+  padding: 60px 20px;
+}
+
+.donate h2 {
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.donate p {
+  margin-bottom: 25px;
+}
+
+.btn {
+  background-color: #FFC907;
+  color: #000;
+  padding: 14px 28px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #F5402C;
+  color: white;
+}
+
+/* MEDIA QUERIES FOR RESPONSIVE DESIGN */
+/* These styles make the layout adapt on smaller screens */
+
+@media (max-width: 768px) {
+  /* Adjust hero text size */
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  /* Stack impact image and text */
+  .impact-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .impact-text, .impact img {
+    flex: 1 1 100%;
+  }
+
+  /* Resize headings */
+  .donate h2, .impact h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Explanation:
+   - The media query targets screens with a width of 768px or less.
+   - It helps make sure your site looks good on tablets and phones.
+   - We stack columns, shrink text, and make layouts vertical instead of side-by-side.
+*/
