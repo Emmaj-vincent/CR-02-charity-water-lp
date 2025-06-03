@@ -44,17 +44,17 @@ body {
 }
 
 .header-logo {
-  height: 40px;                  /* Set logo size */
-  margin-right: 10px;
+  height: 32px;                  /* Set logo size */
+  margin-right: 2px;
   vertical-align: middle;
 }
 
 .header-title {
   display: inline-block;
-  font-family: Avenir, "Nunito", "Figtree"; /* Use Avenir or Proxima Nova */
-  font-size: 1.5em;
+  font-family: "avenir"; /* Use Avenir or Proxima Nova */
+  font-size: 1.2em;
   vertical-align: middle;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 /* Container for logo and title */
@@ -72,7 +72,7 @@ body {
 
 /* Set navigation font to Proxima Nova, with fallbacks */
 .nav-menu a {
-  font-family: "Proxima Nova";
+  font-family: "Avenir";
 }
 
 /* Hamburger Navigation Styles */
@@ -94,10 +94,10 @@ body {
 /* Hamburger lines */
 .nav-hamburger span {
   display: block;
-  width: 25px;
+  width: 20px;
   height: 3px;
   margin: 5px 0;
-  background: #333;
+  background: #1A1A1A; /* Changed from #333 to #1A1A1A */
   border-radius: 2px;
 }
 
@@ -128,13 +128,13 @@ body {
 }
 
 .nav-menu li {
-  text-align: center;
+  text-align: right;
   margin: 10px 0;
 }
 
 .nav-menu a {
   text-decoration: none;
-  color: #333;
+  color: #1A1A1A; /* Changed from #333 to #1A1A1A */
   font-size: 16px;
   padding: 5px 20px;
   display: block;
@@ -165,14 +165,19 @@ body {
 
 /* HERO SECTION */
 .hero {
+  /* Add more space above and below the hero section */
+  padding: 400px 20px; /* Reduced padding for better layout */
   /* Set a background image that covers the whole hero section */
-  background: url('img/Ethiopian\ girl\ holding\ books.jpg') center center/cover no-repeat;
+  background: url('img/Ethiopian\ girl\ holding\ books.jpg') center/cover no-repeat;
   color: white;
-  text-align: center;
-  padding: 100px 20px;
+  /* Align text to the right side */
+  text-align: right;
   max-height: 600px;
   max: width 100%;
   position: relative;
+  display: flex;           /* Use flexbox to align content */
+  align-items: flex-start; /* Align content to the top */
+  justify-content: flex-end; /* Move content to the right */
 }
 
 .hero::before {
@@ -183,10 +188,17 @@ body {
 }
 
 .hero-content {
-  position: relative;
+  position: absolute;
+  top: 0;
+  right: 30px;           /* Position content in the top right corner */
+  max-width: 500px;  
+  text-align: right
   z-index: 1;
-  max-width: 800px;
-  margin: 0 auto;
+  background: none;
+  padding: 100px 10px;    /* Limit width for better readability */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  align-items: flex-end;  /* Align text to the right */
 }
 
 .hero h1 {
@@ -291,7 +303,7 @@ body {
 
 .btn {
   background-color: #FFC907;
-  color: #000;
+  color: #1A1A1A; /* Changed to #1A1A1A */
   padding: 14px 28px;
   text-decoration: none;
   font-weight: bold;
@@ -300,7 +312,7 @@ body {
 }
 
 .btn:hover {
-  background-color: #F5402C;
+  background-color: #8BD1CB; /* Changed to light blue */
   color: white;
 }
 
@@ -349,3 +361,15 @@ body {
    - It helps make sure your site looks good on tablets and phones.
    - We stack columns, shrink text, and make layouts vertical instead of side-by-side.
 */
+
+/* FOOTER SECTION */
+/* Styles for the footer at the bottom of the page */
+.footer {
+  background-color: #fff;    /* Set footer background to white */
+  color: #1A1A1A;            /* Set text color to dark for readability */
+  text-align: left; /* Center the text */
+  padding: 30px 10px;        /* Add space above and below */
+  font-size: 1rem;           /* Set a readable font size */
+}
+
+/* You can add more footer styles here if needed */
