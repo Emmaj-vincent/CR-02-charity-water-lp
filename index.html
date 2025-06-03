@@ -10,12 +10,30 @@
 </head>
 <body>
 
-  <!-- Header with logo and title -->
+  <!-- Header with logo, title, and hamburger navigation -->
   <header class="header">
     <!-- Logo image (replace 'logo.png' with your actual logo file) -->
     <img src="img/water-can-transparent.png" alt="Charity: Water Logo" class="header-logo"/>
     <!-- Website title -->
     <div class="header-title">Charity: Water</div>
+    <!-- Hamburger menu for navigation -->
+    <!-- The checkbox is used to show/hide the menu -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle"/>
+    <!-- Hamburger icon (three lines) -->
+    <label for="nav-toggle" class="nav-hamburger">
+      <!-- Each span is a line of the hamburger -->
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <!-- Navigation menu -->
+    <nav class="nav-menu proxima nova-font">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about us">About Us</a></li>
+        <li><a href="#donate">Donate</a></li>
+      </ul>
+    </nav>
   </header>
 
   <!-- Hero Section -->
@@ -30,11 +48,18 @@
   <!-- Impact Story Section -->
   <section class="impact">
     <div class="impact-container">
+      <!-- Text content for the impact section (h2 and first p) -->
+      <div class="impact-text">
+        <h2>Clean Water: Your Impact Starts Here</h2>
+        <p>Safe, clean water isn't a privilege—it's a right. Yet millions still lack access, leading to disease and poverty.</p>
+        <!-- Added space between paragraphs for clarity -->
+        <br>
+        <p><strong>Charity: Water</strong> fights for change, building wells and filtration systems that restore health, education, and opportunity.</p>
+      </div>
       <!-- 2x2 Image Grid for Impact Section -->
       <div class="impact-images">
         <!-- First row of images -->
         <div class="impact-image-row">
-          <!-- Each image uses its specific class for size -->
           <img src="img/dirty water.jpg" alt="Impact 1" class="impact-img impact-img1">
           <img src="img/dirty water 2.jpg" alt="Impact 2" class="impact-img impact-img2">
         </div>
@@ -42,20 +67,15 @@
         <div class="impact-image-row">
           <img src="img/clean water.jpg" alt="Impact 3" class="impact-img impact-img3">
           <img src="img/Madagascar_2019_CG-3022.jpg" alt="Impact 4" class="impact-img impact-img4">
-        </div>
-      </div>
-      <!-- Text content for the impact section -->
-      <div class="impact-text">
-        <h2>Real Lives Changed</h2>
-        <p>Meet Amina, a young girl in Ethiopia whose life transformed when clean water arrived in her village. She now spends her days in school instead of walking miles to fetch water. Your support makes stories like hers possible.</p>
+        </div>    
       </div>
     </div>
   </section>
 
   <!-- Donation Section -->
   <section class="donate">
-    <h2>Make an Impact Today</h2>
-    <p>Help us reach more communities with clean, safe water.</p>
+    <h2>Join the Movement. Be the Change</h2>
+    <p>As college students committed to sustainability, you have the power to make waves. Every dollar, every voice, every action creates ripples that transform lives.</p>
     <a href="#" class="btn">Donate Now</a>
   </section>
 
