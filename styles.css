@@ -175,6 +175,8 @@ body {
 
 /* HERO SECTION */
 .hero {
+  /* Add font-family for all hero text */
+  font-family: 'Proxima Nova', Arial, sans-serif;
   /* Add more space above and below the hero section */
   padding: 400px 20px; /* Reduced padding for better layout */
   /* Set a background image that covers the whole hero section */
@@ -183,7 +185,7 @@ body {
   /* Align text to the right side */
   text-align: right;
   max-height: 600px;
-  max: width 100%;
+  max-width: 100%;
   position: relative;
   display: flex;           /* Use flexbox to align content */
   align-items: flex-start; /* Align content to the top */
@@ -194,7 +196,8 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4); /* Dark overlay for contrast */
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+  z-index: 0; /* Place behind the content */
 }
 
 .hero-content {
@@ -202,36 +205,40 @@ body {
   top: 0;
   right: 30px;           /* Position content in the top right corner */
   max-width: 500px;  
-  text-align: right
+  text-align: right;
   z-index: 1;
   background: none;
   padding: 100px 10px;    /* Limit width for better readability */
-  display: flex;
-  flex-direction: column; /* Stack content vertically */
-  align-items: flex-end;  /* Align text to the right */
 }
 
 .hero h1 {
   font-family: 'Proxima Nova', Arial, sans-serif;
-  font-size: 2.8rem;
-  margin-bottom: 20px;
+  font-size: 3em;
+  margin-bottom: 20px;;
+  text-align: center; /* Align heading to the right */
 }
 
 .hero p {
-  font-size: 1.2rem;
+  font-size: 1.5em;
   color: #f1f1f1;
+  text-align: center; /* Align paragraph to the right */
 }
 /* Style for the "Give Here" button in the hero section */
 .hero-give-btn {
   /* Use the same style as .btn for consistency */
   background-color: #FFC907; /* Yellow background */
   color: #1A1A1A;            /* Dark text for contrast */
-  padding: 14px 28px;        /* Space inside the button */
-  text-decoration: none;     /* Remove underline from link */
-  font-weight: bold;         /* Make text bold */
+  padding: 5px 10px;        /* Space inside the button */
+  text-decoration: none;
+  font: "Proxima Nova"; 
+  font-weight: bold; 
+  font-size: 15px;        /* Make text bold */
   border-radius: 30px;       /* Rounded corners */
   margin-top: 20px;          /* Space above the button */
-  display: inline-block;     /* Make the button fit its content */
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+  text-align: center;
   transition: background 0.3s;
   border: none;              /* Remove default border */
   cursor: pointer;           /* Show pointer on hover */
@@ -305,7 +312,8 @@ body {
 }
 
 .impact-text {
-  flex: 1 1 45%;
+  flex: 1 1 300px; /* Allow text to take up space */
+  font: "Proxima Nova";
 }
 
 .impact h2 {
@@ -322,31 +330,23 @@ body {
   padding: 60px 20px;
   display: flex;
   align-items: center; /* Center items vertically */
-  justify-content: flex-start; /* Center items horizontally */
-  text-align: left; /* Align text to the left */
+  justify-content: center; /* Center items horizontally */
+  text-align: center; /* Align text to the left */
+  gap: 20px; /* Space between image and text */
 }
 
 /* Style for the donation image on the left */
 .donate img {
   /* Make the image bigger by increasing max-width */
-  max-width: 400px; /* Increased from 300px to 400px */
-  width: 100%;      /* Keep image responsive */
+  max-width: 100%; /* Increased from 300px to 400px */
+  width: 300px;      /* Keep image responsive */
   height: auto;     /* Keep image aspect ratio */
-  margin-left: 20px;  /* Adjust margin to keep image more towards center, but not fully centered */
-  margin-right: 40px;  /* Space between image and text */
-  margin-bottom: 10px; /* Space below image */
-  padding: 20px 20px;  /* Padding around image */
-  display: block;      /* Make sure image is a block element */
-  /* Removed incorrect 'display: flex 1 1 20%;' */
+  margin-right: 20px;  /* Space between image and text */
+  border-radius: 15px;
 }
 
 .donate-container {
- max-width: 600;
-}
-
-.donate-text {
-  flex: 1 1 20%; /* Allow text to take available space */
-  text-align: left; /* Add space between image and text */
+ max-width: 600px;
 }
 
 .donate-text h2 {
