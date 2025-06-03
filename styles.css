@@ -323,7 +323,7 @@ body {
 
 .impact h2 {
   font-family: "Proxima Nova", Arial, sans-serif;
-  font-size: 2rem;
+  font-size: 2em; /* Changed from rem to em */
   margin-bottom: 15px;
 }
 
@@ -361,7 +361,7 @@ body {
   margin-top: 0;
   color:#1A1A1A;
   font weight: bold;
-  font-size: 1em;
+  font-size: 1.5em;
 }
 
 .donate-text p {
@@ -394,7 +394,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 750px; /* Limit the width for better readability */
+  max-width: 800px; /* Limit the width for better readability */
   margin: 0 auto; /* Center the container */
   padding: 20px;
   gap: 20px; /* Space between image and text */
@@ -433,11 +433,11 @@ body {
 @media (max-width: 768px) {
   /* Adjust hero text size */
   .hero h1 {
-    font-size: 2rem;
+    font-size: 2em; /* Changed from rem to em */
   }
 
   .hero p {
-    font-size: 1rem;
+    font-size: 1em;
   }
 
   /* Stack impact image and text */
@@ -475,7 +475,7 @@ body {
   }
   /* Resize headings */
   .donate h2, .impact h2 {
-    font-size: 1.5rem;
+    font-size: 1.5em; /* Changed from rem to em */
   }
 }
 
