@@ -61,7 +61,8 @@ body {
 
 /* HERO SECTION */
 .hero {
-  background: url() center/cover no-repeat;
+  /* Set a background image that covers the whole hero section */
+  background: url('img/Ethiopian\ girl\ holding\ books.jpg') center center/cover no-repeat;
   color: white;
   text-align: center;
   padding: 100px 20px;
@@ -97,26 +98,63 @@ body {
 
 /* IMPACT SECTION */
 .impact {
-  background-color: #BF6C46; /* Changed to new color */
+  background-color: #FFF7E1; /* Changed to a light yellow background */
   padding: 100px 20px;
 }
 
+/* Container for the impact section content */
 .impact-container {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 60px;
   max-width: 1000px;
   margin: 0 auto;
   flex-wrap: wrap;
 }
 
-.impact img {
-  width: 300px;
-  max-width: 100%;
-  margin-right: 20px
-  height: auto;
-  border-radius: 12px;
-  flex: 1 1 45%;
+/* New: Container for the 2x2 image grid */
+.impact-images {
+  display: flex;                /* Use flexbox to arrange rows */
+  flex-direction: column;       /* Stack two rows vertically */
+  gap: 10px;                    /* Space between rows */
+}
+
+/* Each row in the image grid */
+.impact-image-row {
+  display: flex;                /* Arrange images in a row */
+  gap: 10px;                    /* Space between images */
+}
+
+/* Style for each image in the grid */
+.impact-img {
+  width: 200px;                 /* Default width */
+  height: 300px;                /* Default height */
+  object-fit: cover;            /* Crop images to fit nicely */
+  border-radius: 8px;           /* Rounded corners */
+  background: #eee;             /* Light background if image fails to load */
+}
+
+/* Individual styles for each impact image */
+/* You can change width and height for each image below */
+.impact-img1 {
+  width: 280px;   /* Example: set width for first image */
+  height: 200px;  /* Example: set height for first image */
+}
+
+.impact-img2 {
+  width: 200px;   /* Example: set width for second image */
+  height: 200px;  /* Example: set height for second image */
+}
+
+.impact-img3 {
+  width: 200px;   /* Example: set width for third image */
+  height: 200px;  /* Example: set height for third image */
+}
+
+.impact-img4 {
+  width: 280px;   /* Example: set width for fourth image */
+  height: 200px;  /* Example: set height for fourth image */
+  object-position: center top;  /* Show the top (where the woman is likely located) */
 }
 
 .impact-text {
@@ -183,6 +221,17 @@ body {
 
   .impact-text, .impact img {
     flex: 1 1 100%;
+  }
+
+  /* Responsive: Stack images vertically on small screens */
+  .impact-images, .impact-image-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .impact-img {
+    width: 90vw;
+    max-width: 300px;
+    height: 120px;
   }
 
   /* Resize headings */
