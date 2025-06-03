@@ -70,9 +70,15 @@ body {
   margin-left: auto;
 }
 
-/* Set navigation font to Proxima Nova, with fallbacks */
+/* Set navigation font to Avenir for all nav links */
 .nav-menu a {
   font-family: "Avenir";
+  font-size: 17px; /* Match font size to index.html */
+  text-decoration: none;
+  color: #1A1A1A;
+  padding: 5px 20px;
+  display: block;
+  /* This makes each link fill the menu width for easier clicking */
 }
 
 /* Hamburger Navigation Styles */
@@ -111,7 +117,7 @@ body {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   border-radius: 5px;
   padding: 10px 0;
-  min-width: 120px;
+  min-width: 50px;
   z-index: 100;
 }
 
@@ -133,11 +139,15 @@ body {
 }
 
 .nav-menu a {
+  /* Set navigation font to Avenir */
+  font-family: "Avenir";
+  font-size: 17px; /* Match font size to index.html */
+  /* Set link color and remove underline */
   text-decoration: none;
-  color: #1A1A1A; /* Changed from #333 to #1A1A1A */
-  font-size: 16px;
+  color: #1A1A1A;
   padding: 5px 20px;
   display: block;
+  /* This makes each link fill the menu width for easier clicking */
 }
 
 /* Optional: Hide hamburger and show menu horizontally on larger screens */
@@ -210,6 +220,28 @@ body {
 .hero p {
   font-size: 1.2rem;
   color: #f1f1f1;
+}
+
+/* Style for the "Give Here" button in the hero section */
+.hero-give-btn {
+  /* Use the same style as .btn for consistency */
+  background-color: #FFC907; /* Yellow background */
+  color: #1A1A1A;            /* Dark text for contrast */
+  padding: 14px 28px;        /* Space inside the button */
+  text-decoration: none;     /* Remove underline from link */
+  font-weight: bold;         /* Make text bold */
+  border-radius: 30px;       /* Rounded corners */
+  margin-top: 20px;          /* Space above the button */
+  display: inline-block;     /* Make the button fit its content */
+  transition: background 0.3s;
+  border: none;              /* Remove default border */
+  cursor: pointer;           /* Show pointer on hover */
+}
+
+/* Change color when hovering over the button */
+.hero-give-btn:hover {
+  background-color: #8BD1CB; /* Light blue on hover */
+  color: white;
 }
 
 /* IMPACT SECTION */
@@ -299,6 +331,13 @@ body {
 
 .donate p {
   margin-bottom: 25px;
+}
+
+.donate img {
+  width: 300px; /* Set a fixed width for the donation image */
+  display: block;
+  margin: 20px auto;
+  border-radius: 8px; /* Make the image circular */
 }
 
 .btn {
