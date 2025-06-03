@@ -26,7 +26,7 @@ Fonts:
 }
 
 body {
-  font-family: 'Proxima Nova', Arial, sans-serif;
+  font-family: 'Proxima Nova';
   background-color: #fff;
   color: #1A1A1A; /* Changed to a darker color for better readability */
   line-height: 1.6;
@@ -44,15 +44,15 @@ body {
 }
 
 .header-logo {
-  height: 32px;                  /* Set logo size */
+  height: 39px;                  /* Set logo size */
   margin-right: 2px;
   vertical-align: middle;
 }
 
 .header-title {
   display: inline-block;
-  font-family: "avenir"; /* Use Avenir or Proxima Nova */
-  font-size: 1.2em;
+  font-family: 'Avenir'; /* Use Avenir or Proxima Nova */
+  font-size: 1em;
   vertical-align: middle;
   margin-right: 10px;
 }
@@ -70,9 +70,9 @@ body {
   margin-left: auto;
 }
 
-/* Set navigation font to Avenir for all nav links */
+/* Set navigation font to Proxima Nova for all nav links */
 .nav-menu a {
-  font-family: "Avenir";
+  font-family: 'Proxima Nova'; /* Use Proxima Nova for nav links */
   font-size: 17px; /* Match font size to index.html */
   text-decoration: none;
   color: #1A1A1A;
@@ -139,8 +139,8 @@ body {
 }
 
 .nav-menu a {
-  /* Set navigation font to Avenir */
-  font-family: "Avenir";
+  /* Set navigation font to Proxima Nova */
+  font-family: 'Proxima Nova', Arial, sans-serif; /* Use Proxima Nova for nav links */
   font-size: 17px; /* Match font size to index.html */
   /* Set link color and remove underline */
   text-decoration: none;
@@ -175,8 +175,8 @@ body {
 
 /* HERO SECTION */
 .hero {
-  /* Add font-family for all hero text */
-  font-family: 'Proxima Nova', Arial, sans-serif;
+  /* Set all hero text to Proxima Nova font */
+  font-family: "Proxima Nova", Arial, sans-serif;
   /* Add more space above and below the hero section */
   padding: 400px 20px; /* Reduced padding for better layout */
   /* Set a background image that covers the whole hero section */
@@ -212,13 +212,16 @@ body {
 }
 
 .hero h1 {
-  font-family: 'Proxima Nova', Arial, sans-serif;
+  /* Make sure the hero heading uses Proxima Nova */
+  font-family: "Proxima Nova", Arial, sans-serif;
   font-size: 3em;
   margin-bottom: 20px;;
   text-align: center; /* Align heading to the right */
 }
 
 .hero p {
+  /* Make sure the hero paragraph uses Proxima Nova */
+  font-family: "Proxima Nova", Arial, sans-serif;
   font-size: 1.5em;
   color: #f1f1f1;
   text-align: center; /* Align paragraph to the right */
@@ -252,6 +255,8 @@ body {
 
 /* IMPACT SECTION */
 .impact {
+  /* Set all impact section text to Proxima Nova */
+  font-family: "Proxima Nova", Arial, sans-serif;
   background-color: #FFF7E1; /* Changed to a light yellow background */
   padding: 40px 20px; /* Reduced top and bottom padding */
 }
@@ -313,17 +318,19 @@ body {
 
 .impact-text {
   flex: 1 1 300px; /* Allow text to take up space */
-  font: "Proxima Nova";
+  font-family: "Proxima Nova", Arial, sans-serif;
 }
 
 .impact h2 {
-  font-family: 'Proxima Nova', Arial, sans-serif;
+  font-family: "Proxima Nova", Arial, sans-serif;
   font-size: 2rem;
   margin-bottom: 15px;
 }
 
 /* DONATION SECTION */
 .donate {
+  /* Set all donate section text to Proxima Nova */
+  font-family: "Proxima Nova", Arial, sans-serif;
   /* Remove text-align: center to allow side-by-side layout */
   background-color: #BF6C46; /* Changed to new color */
   color: white;
@@ -350,6 +357,7 @@ body {
 }
 
 .donate-text h2 {
+  font-family: "Proxima Nova", Arial, sans-serif;
   margin-top: 0;
   color:#1A1A1A;
   font weight: bold;
@@ -357,6 +365,7 @@ body {
 }
 
 .donate-text p {
+  font-family: "Proxima Nova", Arial, sans-serif;
   font-size: 1em;
   line-height: 1.5;
 }
@@ -379,6 +388,45 @@ body {
   background-color: #8BD1CB; /* Changed to light blue */
   color: white;
 }
+
+.donate-inner {
+  /* Use flexbox to place image and text side by side */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 750px; /* Limit the width for better readability */
+  margin: 0 auto; /* Center the container */
+  padding: 20px;
+  gap: 20px; /* Space between image and text */
+}
+
+/* Style for the image inside the donate section */
+.donate-inner img {
+  width: 300px; /* Set a fixed width for the image */
+  height: auto; /* Keep image aspect ratio */
+  border-radius: 10px; /* Rounded corners for a friendly look */
+}
+
+/* Style for the text content in the donate section */
+.donate-text {
+  /* Allow text to take up remaining space */
+  flex: 1;
+  font-family: "Proxima Nova", Arial, sans-serif;
+}
+
+/* Responsive design: stack image and text on small screens */
+@media (max-width: 600px) {
+  .donate-inner {
+    flex-direction: column; /* Stack vertically */
+    text-align: center; /* Center text for mobile */
+  }
+  .donate-inner img {
+    width: 100%; /* Make image full width on small screens */
+    max-width: 300px; /* But not too large */
+    margin-bottom: 15px;
+  }
+}
+
 /* MEDIA QUERIES FOR RESPONSIVE DESIGN */
 /* These styles make the layout adapt on smaller screens */
 
