@@ -221,7 +221,6 @@ body {
   font-size: 1.2rem;
   color: #f1f1f1;
 }
-
 /* Style for the "Give Here" button in the hero section */
 .hero-give-btn {
   /* Use the same style as .btn for consistency */
@@ -247,7 +246,7 @@ body {
 /* IMPACT SECTION */
 .impact {
   background-color: #FFF7E1; /* Changed to a light yellow background */
-  padding: 100px 20px;
+  padding: 40px 20px; /* Reduced top and bottom padding */
 }
 
 /* Container for the impact section content */
@@ -317,33 +316,59 @@ body {
 
 /* DONATION SECTION */
 .donate {
-  text-align: center;
+  /* Remove text-align: center to allow side-by-side layout */
   background-color: #BF6C46; /* Changed to new color */
   color: white;
   padding: 60px 20px;
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: flex-start; /* Center items horizontally */
+  text-align: left; /* Align text to the left */
 }
 
-.donate h2 {
-  font-family: 'Proxima Nova', Arial, sans-serif;
-  font-size: 2rem;
-  margin-bottom: 15px;
-}
-
-.donate p {
-  margin-bottom: 25px;
-}
-
+/* Style for the donation image on the left */
 .donate img {
-  width: 300px; /* Set a fixed width for the donation image */
-  display: block;
-  margin: 20px auto;
-  border-radius: 8px; /* Make the image circular */
+  /* Make the image bigger by increasing max-width */
+  max-width: 400px; /* Increased from 300px to 400px */
+  width: 100%;      /* Keep image responsive */
+  height: auto;     /* Keep image aspect ratio */
+  margin-left: 20px;  /* Adjust margin to keep image more towards center, but not fully centered */
+  margin-right: 40px;  /* Space between image and text */
+  margin-bottom: 10px; /* Space below image */
+  padding: 20px 20px;  /* Padding around image */
+  display: block;      /* Make sure image is a block element */
+  /* Removed incorrect 'display: flex 1 1 20%;' */
+}
+
+.donate-container {
+ max-width: 600;
+}
+
+.donate-text {
+  flex: 1 1 20%; /* Allow text to take available space */
+  text-align: left; /* Add space between image and text */
+}
+
+.donate-text h2 {
+  margin-top: 0;
+  color:#1A1A1A;
+  font weight: bold;
+  font-size: 1em;
+}
+
+.donate-text p {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+.donate-content .btn {
+  margin-top: 0;                /* No extra margin needed */
 }
 
 .btn {
   background-color: #FFC907;
   color: #1A1A1A; /* Changed to #1A1A1A */
-  padding: 14px 28px;
+  padding: 15px 20px;
   text-decoration: none;
   font-weight: bold;
   border-radius: 30px;
@@ -354,7 +379,6 @@ body {
   background-color: #8BD1CB; /* Changed to light blue */
   color: white;
 }
-
 /* MEDIA QUERIES FOR RESPONSIVE DESIGN */
 /* These styles make the layout adapt on smaller screens */
 
@@ -389,6 +413,18 @@ body {
     height: 120px;
   }
 
+  .donate {
+    display: block;
+    text-align: center;
+  }
+
+  .donate img, .donate-text {
+    display:block;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 20px auto; /* Center the image */
+    padding-left: 0;
+  }
   /* Resize headings */
   .donate h2, .impact h2 {
     font-size: 1.5rem;
